@@ -31,6 +31,16 @@ describe("output", () => {
     expect(consoleOutput).toEqual(["1,2,3"])
   })
 
+  it ("handle array of strings", function () {
+    outputToStdOut(["foo","bar","baz"]);
+    expect(consoleOutput).toEqual(["foo,bar,baz"])
+  })
+
+  it ("handle array of strings and numbers", function () {
+    outputToStdOut(["foo","bar","baz", 1,2,3]);
+    expect(consoleOutput).toEqual(["foo,bar,baz,1,2,3"])
+  })
+
   afterEach(() => {
     console.log = realConsoleLog;
   });
