@@ -26,6 +26,11 @@ describe("output", () => {
     expect(consoleOutput).toEqual(['bar','baz'])
   })
 
+  it ("accepts array of numbers", function () {
+    outputToStdOut([1,2,3]);
+    expect(consoleOutput).toEqual(["1,2,3"])
+  })
+
   afterEach(() => {
     console.log = realConsoleLog;
   });
