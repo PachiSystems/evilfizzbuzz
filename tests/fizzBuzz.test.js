@@ -62,4 +62,8 @@ describe("FizzBuzz", () => {
 
     expect(fizzBuzz(exampleData)).toEqual(expectedData);
   });
+
+  it("should handle missing data", () => {
+    expect(fizzBuzz()).toEqual([]);
+  });
 });
