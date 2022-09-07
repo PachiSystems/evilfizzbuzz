@@ -1,7 +1,7 @@
-function output(input) {
+function outputToStdOut(input) {
   console.log(input)
 }
 
 module.exports = {
-  output,
+  outputToStdOut
 }
