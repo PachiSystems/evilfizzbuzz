@@ -13,7 +13,7 @@ describe("output", () => {
   it("accepts no args", async function() {
 
     output();
-    expect(consoleOutput).toEqual([])
+    expect(consoleOutput).toEqual([undefined])
   });
 
   afterEach(() => {
